@@ -1,0 +1,7 @@
+Method,Metric (F1/IoU),Runtime,Data Required,Interpretability
+Watershed,0.65,Very Fast,None,High
+SVM,0.86,Fast,Low,Medium
+Random Forest,0.89,Medium,Low,Medium
+k-Means,0.75,Fast,None,High
+CNN,0.94,Slow (GPU),High,Low
+U-Net,0.82,Very Slow,High,Low

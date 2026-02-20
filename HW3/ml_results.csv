@@ -1,0 +1,4 @@
+Method,F1-Score,Precision,Recall,Silhouette_Score
+SVM,0.9908771929824561,0.9915730337078652,0.9901823281907434,
+Random Forest,1.0,1.0,1.0,
+K-Means (k=3),,,,0.40935930202625004
