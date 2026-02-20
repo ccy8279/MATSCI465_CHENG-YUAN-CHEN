@@ -41,6 +41,16 @@ The following table summarizes the performance metrics across all implemented me
 |4           | CNN   |          0.94  |Slow (GPU)|          High |             Low|
 |5          |U-Net    |         0.82   |Very Slow |         High |            Low|
 
+The quantitative comparison reveals several key insights into the trade-offs between classical methods and machine learning models:
+
+**Accuracy vs. Complexity:** While the CNN achieved the highest F1-score (0.94), it requires significantly more computational power and labeled data. In contrast, the Random Forest model provided a strong balance, achieving an F1-score of 0.89 with much faster training times and lower data requirements.
+
+**Semantic Understanding:** The U-Net outperformed the Watershed algorithm in segmentation tasks (0.82 vs 0.65 IoU). This is because U-Net utilizes "contextual information" to distinguish between overlapping particles, whereas Watershed relies purely on intensity gradients and distance transforms, which are sensitive to noise.
+
+**Interpretability and Features:** The Random Forest analysis highlighted that Circularity and Area were the most discriminative features. This explains why the unsupervised K-Means (k=3) model was able to group particles effectively; the data naturally clusters based on these geometric proportions.
+
+**Runtime Efficiency:** Classical methods (Watershed and K-Means) remain the most efficient for large-scale batch processing when real-time feedback is required, despite their lower relative accuracy in complex scenarios.
+
 # **3. Recommended Use-Cases**
 
 Based on our benchmarks, we recommend the following application strategies:
